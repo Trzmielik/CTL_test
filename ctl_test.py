@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 n_bins=30
 n_values=10000
+
 def my_distribution(x,y):
     if x > -1.25 and x < 1.25:
         if y<=1:
@@ -36,8 +37,9 @@ def list_of_random_in_distribution(n):
     return lst
 
 if __name__ == "__main__":
-    n_bits=input("How many bars do you want to have in histogram?")
-    sequence=list_of_random_in_distribution(n_bins*n_values)
+    n_bins=int(input("Number of bars in histogram: "))
+    n_values=int(input("Number of generated values: "))
+    sequence=list_of_random_in_distribution(n_values)
     means_2=[]
     means_5=[]
     means_10=[]
